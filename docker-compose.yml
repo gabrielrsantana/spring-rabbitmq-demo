@@ -3,8 +3,30 @@ services:
     image: rabbitmq:3-management
     container_name: rabbitmq-local
     ports:
-      - "5672:5672"      # porta para comunicação com aplicações
-      - "15672:15672"    # porta do painel de administração web
+      - "5672:5672"
+      - "15672:15672"
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
+    networks:
+      - rabbit-net
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+
+  app:
+    build: .
+    depends_on:
+      - rabbitmq
+    ports:
+      - "8080:8080"
+    container_name: springboot-app
+    networks:
+      - rabbit-net
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+
+networks:
+  rabbit-net:
+    driver: bridge

@@ -1,6 +1,6 @@
-package sender;
+package com.example.rabbitmqdemo.sender;
 
-import config.RabbitMQConfig;
+import com.example.rabbitmqdemo.config.RabbitMQConfig;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 

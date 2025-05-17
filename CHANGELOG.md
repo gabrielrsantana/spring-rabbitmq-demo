@@ -5,6 +5,10 @@ Todas as mudanças importantes neste projeto serão documentadas aqui.
 O formato segue as convenções do [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/), e este projeto segue [SemVer](https://semver.org/lang/pt-BR/).
 
 ---
+## [1.0.1] - 2025-05-17
+
+### Adicionado
+- scripts de stop para os containers do projeto java e RabbitMq
 
 ## [1.0.0] - 2025-05-15
 

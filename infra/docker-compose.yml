@@ -12,7 +12,9 @@ services:
       - rabbit-net
 
   app:
-    build: .
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
     depends_on:
       - rabbitmq
     ports:

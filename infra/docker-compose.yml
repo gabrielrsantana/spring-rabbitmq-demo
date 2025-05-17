@@ -13,6 +13,8 @@ services:
 
   app:
     build: .
+    context: ..  #o contexto de build é a pasta pai da pasta infra/
+    dockerfile: infra/Dockerfile
     depends_on:
       - rabbitmq
     ports:

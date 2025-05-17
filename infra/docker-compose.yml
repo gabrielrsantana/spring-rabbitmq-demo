@@ -8,6 +8,7 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
+  #pode remover, Docker usa uma rede default automaticamente
     networks:
       - rabbit-net
 
@@ -15,6 +16,7 @@ services:
     build:
       context: ..
       dockerfile: infra/Dockerfile
+  #depends_on se removido Pode gerar erro se app subir antes do RabbitMQ
     depends_on:
       - rabbitmq
     ports:

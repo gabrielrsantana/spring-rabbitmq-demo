@@ -16,7 +16,7 @@ O formato segue as convenções do [Keep a Changelog](https://keepachangelog.com
 - Dockerfile configurado para build de aplicação Spring Boot com JDK 17.
 - Exposição das portas 8080, 5672 e 15672 para comunicação entre containers e acesso ao painel RabbitMQ.
 - Rota HTTP (REST) para envio de mensagens para a fila.
-
+- script pra rodar os containers
 ### Corrigido
 - Problema de DNS no WSL2 impedindo resolução de nomes e acesso ao Docker Hub.
 - Conexão recusada entre aplicação e RabbitMQ ajustando o `host: rabbitmq` no `application.yml`.

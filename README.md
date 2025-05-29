@@ -1,7 +1,8 @@
 # Spring Boot RabbitMQ Demo
 
 Este é um projeto de exemplo usando Spring Boot 3 e RabbitMQ para enviar e consumir mensagens de forma simples.
-
+Não foram feitos testes de unidade, pois o projeto é só para mostrar como funciona o RabbitMQ.
+Foi optado usar o WSl2 no Windows para executar o projeo pois, o Docker Engine é mais leve do que o Docker Desktop.
 ---
 
 ## Funcionalidades
